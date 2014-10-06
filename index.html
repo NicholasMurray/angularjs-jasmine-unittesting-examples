@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Angular - Unit Testing - Services</title>
+    <!-- script src="app/scripts/angular.min.js"></script -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/js/services/subredditService.js"></script>
+    <script src="app/js/controllers/subredditController.js"></script>
+  </head>
+
+  <body>
+  	<div ng-controller="subredditCtrl">
+  		<h2>Bicycling Subreddit Posts</h2>
+  		<ul>
+  			<li ng-repeat="title in postsTitles">{{ title }}</li>
+  		</ul>
+  	</div>
+  </body>
+
+</html>
