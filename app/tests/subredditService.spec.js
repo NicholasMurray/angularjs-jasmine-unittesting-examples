@@ -11,7 +11,7 @@ describe("subreddit api service", function () {
     httpBackend = _$httpBackend_;
   }));
 
-  it("should do something", function () {
+  it("should do return reddit post titles for the passed subreddit", function () {
     httpBackend.whenGET("http://www.reddit.com/r/testing/.json").respond({
         data: {
           children: [
