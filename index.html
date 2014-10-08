@@ -13,7 +13,15 @@
 
   <body>
   	<div ng-controller="subredditCtrl">
+      <!-- add a select list to chose which subreddits to view and pass to controller -->
+      <!-- then convert it to a directive and add test -->
   		<h2>Bicycling Subreddit Posts</h2>
+      <select id="" name="" ng-change="changed()" ng-model="subreddits">
+        <option value="">-- Choose a Subreddit --</option>
+        <option value="bicycling">bicycling</option>
+        <option value="whichbike">which bike?</option>
+        <option value="bustedcarbon">busted carbon</option>
+      </select>
   		<ul>
   			<li ng-repeat="title in postsTitles">{{ title }}</li>
   		</ul>
