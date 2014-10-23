@@ -15,9 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+        'app/scripts/jquery.js',
         'app/scripts/angular.js',
         'app/scripts/angular-mocks.js',
         'app/scripts/lodash.js',
+        'app/templates/**/*.html',
         'app/app.js',
         'app/js/**/*.js',
         'app/tests/*.js'
@@ -32,7 +34,12 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+    	'templates/*.html':['ng-html2js']
     },
+
+  	ngHtml2JsPreprocessor: {
+  	   moduleName: 'templates'
+  	},
 
 
     // test results reporter to use

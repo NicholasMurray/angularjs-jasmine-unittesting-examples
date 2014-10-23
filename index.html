@@ -7,6 +7,7 @@
     <!-- script src="app/scripts/angular.min.js"></script -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
     <script src="app/app.js"></script>
+    <script src="app/js/directives/subredditDirective.js"></script>
     <script src="app/js/services/subredditService.js"></script>
     <script src="app/js/controllers/subredditController.js"></script>
   </head>
@@ -15,7 +16,7 @@
   	<div ng-controller="subredditCtrl">
       <!-- add a select list to chose which subreddits to view and pass to controller -->
       <!-- then convert it to a directive and add test -->
-  		<h2>Bicycling Subreddit Posts</h2>
+      <subreddit-header text="Cycle Related Subreddits"></subreddit-header>
       <select id="" name="" ng-change="changed()" ng-model="subreddits">
         <option value="">-- Choose a Subreddit --</option>
         <option value="bicycling">bicycling</option>

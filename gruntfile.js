@@ -7,9 +7,19 @@ module.exports = function (grunt) {
             unit: {
                 configFile: 'karma.conf.js'
             }
+        },
+
+        watch: {
+            karma: {
+                files: ['app/**/*.js', 'app/tests/**/*.js'],
+                tasks: ['karma:unit:run']
+            }
         }
+
     });
 
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-karma');
-    grunt.registerTask('default', ['karma']);
+    //grunt.registerTask('default', ['karma']);
+    grunt.registerTask('default', ['karma:unit', 'watch']);
 };
