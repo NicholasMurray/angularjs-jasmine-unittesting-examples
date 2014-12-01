@@ -32,9 +32,16 @@ describe("subreddit controller", function () {
     });
   }));
 
-  it('should create $scope.postsTitles when called',
+  it('should call the subredditService again if onchange event is fired',
     function() {
       $scope.$apply();
+      expect($scope.postsTitles).toEqual(["Testing with Jasmine", "Testing with QUnit", "Testing with Mocha"]);
+
+      $scope.postsTitles = "";
+
+      $scope.changed();
+      $scope.$digest();
+
       expect($scope.postsTitles).toEqual(["Testing with Jasmine", "Testing with QUnit", "Testing with Mocha"]);
   });
 

@@ -10,7 +10,7 @@ app.controller('subredditCtrl', function($scope, subredditService) {
 
 	// onchange
 	$scope.changed = function() {
-			selectedSubreddit = $scope.subreddits
+			selectedSubreddit = $scope.subreddits;
 			callSubredditService();
 	}
 
